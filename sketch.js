@@ -14,6 +14,8 @@ var g = 0;
 
 var r = 0;
 
+var bl = 208;
+
 var cloud1;
 var cloud2;
 var cloud3;
@@ -88,9 +90,9 @@ function draw() {
 
 
     if (dist(point.x, point.y, myVagalume[j].x, myVagalume[j].y) < point.diameter + myVagalume[j].diameter) {
-      b = b - 1;
-      r = r + 1;
-      g = g + 1;
+      b = b - 2;
+      r = r + 2;
+      g = g + 2;
 
       for (b = 102; b < 200; b++) {
 
@@ -137,7 +139,7 @@ function Luna(_x, _y, _d) {
   this.x = _x;
   this.y = _y;
   this.diameter = _d;
-  this.color = '#ffffcc';
+  this.color = color(255, 255, bl);
 
   this.show = function() {
     noStroke();
